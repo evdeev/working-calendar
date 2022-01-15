@@ -25,8 +25,8 @@ jobs:
     - name: Update pip
       run:  python -m pip install --upgrade pip
       
-    - name: Delete old repo
-      run:  rm -f working-calendar
+#     - name: Delete old repo
+#       run:  rm -f working-calendar
       
     - name: Git clone repo
       run:  git clone https://github.com/evdeev/working-calendar.git && cd working-calendar
