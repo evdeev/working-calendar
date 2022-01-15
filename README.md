@@ -10,12 +10,12 @@
 
 ```json
 {
-  ...
+// ... some data ...
   '2022-02-21': 'workday',
   '2022-02-22': 'preholiday',
   '2022-02-23': 'holiday weekend',
   '2022-02-24': 'workday',
-  ...
+// ... some data ...
 }
 ```
 
