@@ -57,3 +57,8 @@ save_working_calendar(data=data, path='data')
 > python3 main.py --range 2010 2022 --path your_folder
 ```
 
+
+**Зависимости**
+```bash
+> pip3 install -r requirements.txt
+```
