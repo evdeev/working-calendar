@@ -20,6 +20,21 @@ def get_month_number(month_name: str, locale="ru_RU") -> int:
         month_names = tuple(x.lower() for x in month_abbr)
         return month_names.index(month_name.lower()[:3])
 
+month_number_dict = {
+    'январь': 1,
+    'февраль': 2,
+    'март': 3,
+    'апрель': 4,
+    'май': 5,
+    'июнь': 6,
+    'июль': 7,
+    'август': 8,
+    'сентябрь': 9,
+    'октябрь': 10,
+    'ноябрь': 11,
+    'декабрь': 12
+}
+
 
 def get_working_calendar(input_year: int | str) -> dict:
     input_validation_year(input_year)
@@ -30,8 +45,8 @@ def get_working_calendar(input_year: int | str) -> dict:
     raw_calendar_year = soup.find_all('table', class_='cal')
 
     for month in raw_calendar_year:
-        month_name = month.find('th', class_='month').text
-        month_num = get_month_number(month_name)
+        month_name = month.find('th', class_='month').text.lower()
+        month_num = month_number_dict[month_name]
         month_days = [day for day in month.find_all('td')]
 
         for day_td in month_days:
