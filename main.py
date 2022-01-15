@@ -39,7 +39,7 @@ else:
             file_path = out_path / f'{year}.json'
             save_working_calendar(data=working_calendar, path=file_path)
 
-    except TypeError:
+    except:
         working_calendar = get_working_calendar(args.years)
         file_path = out_path / f'{args.years}.json'
         save_working_calendar(data=working_calendar, path=file_path)
